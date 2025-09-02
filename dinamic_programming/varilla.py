@@ -19,10 +19,10 @@ def cutRod(p,n): #p = precio de las varillas, y n = longitud de la misma
     return q
 
 
-print("Solucion recursiva: ", cutRod(p,varilla4))
+print("Solucion recursiva con varilla 4: ", cutRod(p,varilla1))
 
 finR = time.time()
-print("Tiempo de ejecución recursivo", finR-inicioR, " segundos")
+print("Tiempo de ejecución recursivo", finR-inicioR, " segundos", "\n")
 #Solución con programación dinamica
 
 inicioDP = time.time()
@@ -41,11 +41,11 @@ def cutRodDP(p,n,memo):
     return memo[n]
 
 
-print("Solución con programación dinamica dinamica: ", cutRodDP(p,varilla4,memo))
+print("Solución programación dinamica con varilla 1: ", cutRodDP(p,varilla1,memo))
 
 finDP = time.time()
 
-print("Tiempo de ejecución con programacion dinamica: ", finDP - inicioDP, " segundos")
+print("Tiempo de ejecución con programacion dinamica: ", finDP - inicioDP, "segundos","\n")
 
 #Solucion bottom-up
 
@@ -66,8 +66,8 @@ def cutRodBottomUp(p,n):
     return dp[n]
 
 
-print("Solucion con Bottom Up: ", cutRodBottomUp(p,varilla4))
+print("Solucion con Bottom Up con varilla 1: ", cutRodBottomUp(p,varilla1))
 
 finBU = time.time()
 
-print("Tiempo de ejecución con Bottom Up: ", finBU - inicioBU, " segundos")
+print("Tiempo de ejecución con Bottom Up: ", finBU - inicioBU, "segundos", "\n")
